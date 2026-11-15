@@ -1,29 +1,57 @@
-# LaptopLift - Responsive Marketing Campaign Website
+LaptopLift - Responsive Marketing Campaign Website
 
-A multi-page, responsive campaign website for a fictional student laptop sale.
+A multi-page, responsive campaign website for a fictional student laptop sale, built to practise full-stack web development.
 
-**Tech:** HTML5, CSS3 (Flexbox, Grid, media queries), JavaScript, Python, Flask, MySQL
-
-## Features
-- 4 pages: Home, Offers, About, Contact (Jinja2 templates with a shared base)
-- Responsive layout for desktop, tablet and mobile
-- JavaScript: mobile menu, FAQ accordion, client-side form validation
-- Flask REST endpoint `POST /api/leads` with server-side validation
-- Leads stored in a MySQL table
-
-## Run locally
-1. Install MySQL and run: `mysql -u root -p < schema.sql`
-2. `pip install -r requirements.txt`
-3. Set DB credentials if needed (defaults: root, empty password):
-   - Windows PowerShell: `$env:DB_PASSWORD="yourpassword"`
-   - Mac/Linux: `export DB_PASSWORD=yourpassword`
-4. `python app.py` and open http://127.0.0.1:5000
-
-## Check saved leads
-`SELECT * FROM leads;`
-
-## What I learned
-(Write 3-4 points in your own words after you finish.)
-
-## Screenshots
-(Add desktop, tablet and mobile screenshots here.)
+Tech Stack
+Frontend: HTML5, CSS3 (Flexbox, Grid, media queries), JavaScript
+Backend: Python, Flask, REST API
+Database: MySQL
+Features
+4 pages: Home, Offers, About and Contact, built with Jinja2 templates and a shared base layout
+Responsive design for desktop, tablet and mobile, with a mobile navigation menu
+FAQ accordion built with JavaScript
+Contact form with client-side and server-side validation
+Flask REST endpoint POST /api/leads that stores messages in MySQL using parameterised queries
+Screenshots
+Home	Offers
+Home	Offers
+Contact	Mobile
+Contact	Mobile
+Project Structure
+campaign-site/
+├── app.py
+├── schema.sql
+├── requirements.txt
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── offers.html
+│   ├── about.html
+│   └── contact.html
+└── static/
+    ├── css/style.css
+    └── js/main.js
+How to Run Locally
+Install Python and MySQL.
+Create the database:
+mysql -u root -p < schema.sql
+Create a virtual environment and install dependencies:
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+Set your database password as an environment variable (PowerShell):
+$env:DB_PASSWORD='your_password'
+Run the app:
+python app.py
+Open http://127.0.0.1:5000
+Environment Variables
+Variable	Default
+DB_HOST	localhost
+DB_USER	root
+DB_PASSWORD	(empty)
+DB_NAME	campaign_db
+What I Learned
+Building responsive layouts with Flexbox, Grid and media queries
+Connecting a JavaScript front end to a Flask API using fetch
+Validating input on both the client and the server
+Storing data safely in MySQL using parameterised queries
