@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="container hero-inner">
+    <h1>Back-to-College Laptop Sale</h1>
+    <p>Save up to 30% on student-ready laptops. Offer ends this month.</p>
+    <a class="btn" href="{{ url_for('offers') }}">View Offers</a>
+  </div>
+</section>
+
+<section class="container section">
+  <h2>Why students choose us</h2>
+  <div class="grid">
+    <article class="card"><h3>Student Pricing</h3><p>Exclusive discounts for verified students.</p></article>
+    <article class="card"><h3>Free Delivery</h3><p>Fast, free shipping on every order.</p></article>
+    <article class="card"><h3>1-Year Warranty</h3><p>Every laptop is covered for peace of mind.</p></article>
+  </div>
+</section>
+
+<section class="container section">
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <button class="faq-q" aria-expanded="false">Who can use the student offer?</button>
+    <div class="faq-a"><p>Any student with a valid college ID.</p></div>
+    <button class="faq-q" aria-expanded="false">How long does delivery take?</button>
+    <div class="faq-a"><p>Most orders arrive within 3 to 5 working days.</p></div>
+    <button class="faq-q" aria-expanded="false">Can I return a laptop?</button>
+    <div class="faq-a"><p>Yes, within 7 days if it is unused and in original packaging.</p></div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+<section class="container section narrow">
+  <h2>Get in touch</h2>
+  <form id="leadForm" novalidate>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" autocomplete="name">
+    <span class="error" data-error-for="name"></span>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" autocomplete="email">
+    <span class="error" data-error-for="email"></span>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+    <span class="error" data-error-for="message"></span>
+
+    <button type="submit" class="btn">Send Message</button>
+    <p id="formStatus" class="status" role="status"></p>
+  </form>
+</section>
+{% endblock %}

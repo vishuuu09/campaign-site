@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Leads{% endblock %}
+{% block content %}
+<section class="container section">
+  <h2>Submitted Messages</h2>
+  {% if leads %}
+  <div class="table-wrap">
+    <table>
+      <tr><th>ID</th><th>Name</th><th>Email</th><th>Message</th><th>Date</th></tr>
+      {% for l in leads %}
+      <tr><td>{{ l.id }}</td><td>{{ l.name }}</td><td>{{ l.email }}</td><td>{{ l.message }}</td><td>{{ l.created_at }}</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+  {% else %}
+  <p>No messages yet.</p>
+  {% endif %}
+</section>
+{% endblock %}
